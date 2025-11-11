@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Everything World Theme Park</title>
+<style>
+body {
+margin: 0;
+background-color: #000;
+color: white;
+font-family: 'Poppins', sans-serif;
+text-align: center;
+}
+header {
+background: linear-gradient(90deg, #0077ff, #ff6600);
+padding: 20px;
+font-size: 2rem;
+font-weight: bold;
+}
+nav {
+background-color: #111;
+padding: 10px;
+}
+nav a {
+color: white;
+text-decoration: none;
+margin: 0 15px;
+font-weight: bold;
+transition: color 0.3s;
+}
+nav a:hover {
+color: #ff6600;
+}
+section {
+padding: 50px 20px;
+}
+.rides, .tickets {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 20px;
+}
+.card {
+background: rgba(255, 255, 255, 0.05);
+border-radius: 15px;
+width: 280px;
+padding: 20px;
+transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+transform: scale(1.05);
+box-shadow: 0 0 20px #ff6600;
+}
+.card img {
+width: 100%;
+border-radius: 10px;
+margin-bottom: 10px;
+}
+.main-attraction {
+background: linear-gradient(90deg, #0077ff, #ff6600);
+padding: 60px 20px;
+color: #fff;
+position: relative;
+overflow: hidden;
+}
+.main-attraction::before, .main-attraction::after {
+content: '';
+position: absolute;
+top: 0;
+width: 50%;
+height: 100%;
+opacity: 0.5;
+animation: pulse 2s infinite alternate;
+}
+.main-attraction::before {
+left: 0;
+background: rgba(0, 119, 255, 0.4);
+}
+.main-attraction::after {
+right: 0;
+background: rgba(255, 102, 0, 0.4);
+}
+@keyframes pulse {
+from { opacity: 0.4; }
+to { opacity: 0.8; }
+}
+iframe {
+width: 80%;
+height: 300px;
+border: none;
+border-radius: 15px;
+margin-top: 20px;
+}
+
+/* Payment form styles (keeps the look consistent) */
+.payment-card {
+background: rgba(255,255,255,0.03);
+border-radius: 12px;
+padding: 18px;
+width: 90%;
+max-width: 720px;
+margin: 10px auto;
+text-align: left;
+box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
+.payment-row {
+display: flex;
+gap: 12px;
+flex-wrap: wrap;
+}
+.payment-row .field {
+flex: 1 1 200px;
+display: flex;
+flex-direction: column;
+margin-bottom: 10px;
+}
+label {
+font-size: 0.9rem;
+margin-bottom: 6px;
+color: #ddd;
+}
+input, select {
+padding: 10px;
+border-radius: 8px;
+border: 1px solid rgba(255,255,255,0.08);
+background: rgba(0,0,0,0.4);
+color: #fff;
+outline: none;
+}
+input::placeholder { color: #999; }
+.btn {
+display: inline-block;
+padding: 12px 20px;
+border-radius: 10px;
+background: linear-gradient(90deg,#0077ff,#ff6600);
+color: #fff;
+border: none;
+cursor: pointer;
+font-weight: 700;
+margin-top: 6px;
+}
+.note {
+color: #ffcc66;
+font-size: 0.9rem;
+margin-top: 8px;
+}
+.success {
+background: rgba(0,200,0,0.12);
+color: #bfffbf;
+padding: 12px;
+border-radius: 8px;
+margin-top: 12px;
+}
+.error {
+background: rgba(255,0,0,0.08);
+color: #ffd2d2;
+padding: 10px;
+border-radius: 8px;
+margin-top: 12px;
+}
+</style>
+</head>
+<body>
+<header>Everything World 🌍</header>
+<nav>
+<a href="#splash">Splash Zone</a>
+<a href="#desert">Desert Circus</a>
+<a href="#mascots">Mascots</a>
+<a href="#main">Main Attraction</a>
+<a href="#tickets">Tickets</a>
+<a href="parkmap.html">Park Map</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<section id="intro">
+<h2>Welcome to Everything World!</h2>
+<p>Step into a theme park like no other — where the waves of Splash Zone crash against the sands of Desert Circus! Adventure, excitement, and wonder await at every corner.</p>
+</section>
+
+<section id="splash">
+<h2>💦 Splash Zone Rides</h2>
+<div class="rides">
+<div class="card">SplashWhirls Story — Spin through the tides of fun in this twisting, turning ride of water wonder!</div>
+<div class="card">Pirates of the Emirates — Sail the Arabian waters with fearless pirates in this thrilling water adventure.</div>
+<div class="card">Dragon Splash — Race down the world’s fastest slide through dragon-shaped tunnels!</div>
+<div class="card">Atlantis Throne — Discover the lost city beneath the waves with glowing underwater tunnels.</div>
+<div class="card">Shark Attack — Dive into a glass tunnel surrounded by fierce sharks!</div>
+<div class="card">Lazy River — Float peacefully through tropical paradise.</div>
+</div>
+</section>
+
+<section id="desert">
+<h2>🏜️ Desert Circus Rides</h2>
+<div class="rides">
+<div class="card">Falcon Whirl — Fly across golden dunes like a desert falcon in this whirlwind of speed.</div>
+<div class="card">Solaras Story — Enter the blazing world of Solara, the desert’s fiery guardian.</div>
+<div class="card">Sun & Above — Soar into the heat of the desert skies.</div>
+<div class="card">Desert Cars — Drift through sandy tracks in the desert challenge.</div>
+<div class="card">Desert Storm — Feel the wrath of the desert winds in this high-intensity coaster.</div>
+<div class="card">Scorcher — Spin through blazing hoops in this fiery thrill ride.</div>
+<div class="card">Mirage Storm — Experience a whirlwind of sand, lights, and speed in this dazzling ride.</div>
+</div>
+</section>
+
+<!-- Mascots Section -->
+<section id="mascots">
+<h2>🎭 Meet Our Mascots</h2>
+<div class="rides">
+<div class="card">
+<img src="splashwhirl.jpeg" alt="SplashWhirl Mascot">
+<h3>💧 SplashWhirl</h3>
+<p>The playful water spirit of Splash Zone, always ready to spin into fun!</p>
+</div>
+
+<div class="card">
+<img src="Solara.jpeg" alt="Solara Mascot">
+<h3>☀️ Solara</h3>
+<p>The fiery desert guardian of Desert Circus, bringing heat and excitement wherever she goes!</p>
+</div>
+</div>
+</section>
+
+<section id="main" class="main-attraction">
+<h2>⚔️ Main Attraction: Solara vs SplashWhirl</h2>
+<p>Witness the epic battle of fire and water! Watch Solara and SplashWhirl clash in a spectacular 4D experience packed with lights, mist, and heat effects — the ultimate showdown of elements!</p>
+</section>
+
+<section id="tickets">
+<h2>🎟️ Tickets</h2>
+<div class="tickets">
+<div class="card">Family Ticket — 300 AED</div>
+<div class="card">Fast Pass — 200 AED</div>
+<div class="card">Normal Ticket — 100 AED</div>
+</div>
+
+<!-- Fake payment/demo checkout (client-side simulation only) -->
+<div class="payment-card" id="demo-payment">
+<h3 style="margin-top:0">Demo Checkout (Fake Payment)</h3>
+<p class="note">This is a simulated payment interface for demo/testing only — it will not process real money.</p>
+
+<form id="fakePayForm" onsubmit="return false;">
+<div class="payment-row">
+<div class="field">
+<label for="ticketType">Ticket Type</label>
+<select id="ticketType" required>
+<option value="100">Normal Ticket — 100 AED</option>
+<option value="200">Fast Pass — 200 AED</option>
+<option value="300">Family Ticket — 300 AED</option>
+</select>
+</div>
+
+<div class="field">
+<label for="quantity">Quantity</label>
+<input id="quantity" type="number" min="1" value="1" required />
+</div>
+</div>
+
+<hr style="border:1px solid rgba(255,255,255,0.04); margin:14px 0">
+
+<div class="payment-row">
+<div class="field">
+<label for="cardName">Cardholder Name</label>
+<input id="cardName" type="text" placeholder="Your name" required />
+</div>
+<div class="field">
+<label for="cardNumber">Card Number</label>
+<input id="cardNumber" type="text" inputmode="numeric" placeholder="4242 4242 4242 4242" maxlength="19" required />
+</div>
+</div>
+
+<div class="payment-row">
+<div class="field">
+<label for="exp">Expiry (MM/YY)</label>
+<input id="exp" type="text" placeholder="08/28" maxlength="5" required />
+</div>
+<div class="field">
+<label for="cvc">CVC</label>
+<input id="cvc" type="text" inputmode="numeric" placeholder="123" maxlength="4" required />
+</div>
+</div>
+
+<button class="btn" id="payBtn" type="button">Pay (Demo)</button>
+
+<div id="payResult" aria-live="polite"></div>
+</form>
+</div>
+</section>
+
+<section id="contact">
+<h2>📞 Contact Us</h2>
+<p>Phone: +971 555 432 198</p>
+<p>Email: info@everythingworld.ae</p>
+<p>Address: Yas Island, Abu Dhabi, UAE</p>
+<iframe src="https://www.google.com/maps?q=Yas+Island,+Abu+Dhabi,+UAE&output=embed"></iframe>
+</section>
+
+<script>
+// Demo-only fake payment simulation
+(function(){
+const payBtn = document.getElementById('payBtn');
+const result = document.getElementById('payResult');
+
+function sanitizeNumber(input) {
+return (input || '').replace(/\D/g, '').slice(0, 16);
+}
+
+function formatCardNumber(v){
+return v.replace(/\s?/g, '').replace(/(\d{4})/g, '$1 ').trim();
+}
+
+const cardNumberInput = document.getElementById('cardNumber');
+cardNumberInput.addEventListener('input', () => {
+const sanitized = sanitizeNumber(cardNumberInput.value);
+cardNumberInput.value = formatCardNumber(sanitized);
+});
+
+payBtn.addEventListener('click', () => {
+result.innerHTML = '';
+result.className = '';
+
+const ticketPrice = Number(document.getElementById('ticketType').value);
+const qty = Math.max(1, Number(document.getElementById('quantity').value) || 1);
+const name = document.getElementById('cardName').value.trim();
+const cardNum = sanitizeNumber(document.getElementById('cardNumber').value);
+const exp = document.getElementById('exp').value.trim();
+const cvc = document.getElementById('cvc').value.trim();
+
+if (!name || cardNum.length < 12 || !/^\d{2}\/\d{2}$/.test(exp) || cvc.length < 3) {
+result.className = 'error';
+result.textContent = 'Please fill demo card details in the fields correctly.';
+return;
+}
+
+payBtn.disabled = true;
+payBtn.textContent = 'Processing...';
+
+setTimeout(() => {
+const txId = 'DEMO-' + Math.random().toString(36).substring(2,10).toUpperCase();
+const total = ticketPrice * qty;
+result.className = 'success';
+result.innerHTML = '<strong>Payment simulated — demo only.</strong>'
++ '<div style="margin-top:8px">Transaction ID: <code>' + txId + '</code></div>'
++ '<div style="margin-top:6px">Name: ' + escapeHtml(name) + '</div>'
++ '<div style="margin-top:6px">Amount: ' + total + ' AED (' + qty + ' × ' + ticketPrice + ')</div>';
+
+payBtn.disabled = false;
+payBtn.textContent = 'Pay (Demo)';
+}, 1200);
+});
+
+function escapeHtml(str) {
+return String(str).replace(/[&<>"']/g, function (s) {
+return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[s];
+});
+}
+})();
+</script>
+</body>
+</html>
